@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/output.css">
+
+  <meta name="keywords" content="Football Association, JFA, JUUICHI, Football, サッカー協会,  ">
+  <meta name="description" content="">
+
+<script>window.jQuery || document.write('<script src="js/jquery-2.0.3.min.js"><\/script>')</script>
+<script src="js/waypoints.js"></script>
+<script src="js/animatescroll.js"></script>
+<script src="js/jquery.flexslider.js"></script>
+<script src="js/base.js"></script>
+<script src="js/cover.js"></script>
+
+</head>
+
+<body class="">
+
+<!--<header class="header clear" role="banner">
+
+  <!--<div id="logo">
+    <a href="<?php echo home_url(); ?>">Football Association by JUUICHI</a>
+  </div>
+  <!-- only for small device  --*>
+  <div id="small">
+    <a href="<?php echo home_url(); ?>">JFA</a>
+  </div>--*>
+
+  <!--<nav id="fixed">
+    <ul>
+      <li class="menu1">
+        <a href="#box-1" onclick="$('#box-1').animatescroll({padding:50});">About</a>
+      </li>
+      <li class="menu2">
+        <a href="#box-2" onclick="$('#box-2').animatescroll();">Book</a>
+      </li>
+      <li class="menu3">
+        <a href="#box-3" onclick="$('#box-3').animatescroll();">Studies</a>
+      </li>
+      <li class="menu4">
+        <a href="#box-4" onclick="$('#box-4').animatescroll();">Contact</a>
+      </li>
+    </ul>
+  </nav>--*>
+  <!-- icon  --*>
+  <!--<div id="menu_icons">
+    <!--<div id="info_icon">
+      <a class="activator" id="activator">
+        <img src="img/cc.svg"/>
+      </a>
+    </div>--*>
+    <div id="download_icon">
+      <a class="activator2" id="activator2">
+        <img src="img/info.svg"/>
+      </a>
+    </div>
+  </div>--*>
+</header>-->
+
+<!-- Dropdown Info -->
+<div class="overlay" id="overlay" style="display:none;"></div>
+<div class="modal_box" id="modal_box">
+  <a class="modal_boxclose" id="modal_boxclose"></a>
+  <p>
+    Football Association by JUUICHI is licensed under a
+    <a href="http://creativecommons.org/licenses/by-nc-nd/4.0/deed.ja">Creative Commons BY-NC-ND 4.0</a>
+    .
+  </p>
+  <p>
+    <img src="img/nc-jpw.svg"/>
+    <img src="img/byw.svg"/>
+    <img src="img/ndw.svg"/>
+  </p>
+</div>
+
+<!-- Dropdown Info -->
+<div class="overlay2" id="overlay2" style="display:none;"></div>
+<div class="modal_box2" id="modal_box2">
+  <a class="modal_boxclose2" id="modal_boxclose2"></a>
+  <p>お問い合わせ：</p>
+  <p>Web: http://j-f-a.org/</p>
+  <p>
+    Mail:
+    <a href="mailto:fa@juuichi.com">
+      <span style="color:#fff;">fa@juuichi.com</span>
+    </a>
+  </p>
+  <p>Twitter: @JFA_org</p>
+</div>
+
+<div id="wrapper">
+  <div class="flexslider">
+    <!--<p class="issue-footer issue-content">
+        <a onclick="$('.flexslider').flexslider(0);" class="selected">HOME</a>
+        <a onclick="$('.flexslider').flexslider(1)">1</a>
+        <a onclick="$('.flexslider').flexslider(2)">2</a>
+    </p>-->
+    <ul class="slides">
+      <li style="background-image:url('img/2sec.gif');">
+      </li>
+      <li>
+        <div class="feature-credit">
+          <h2>
+            Exhibition
+          </h2>
+        </div>
+      </li>
+      <li>
+        <div class="feature-credit">
+          <h2>
+            <a href="http://atara.cc/">New Rule</a> / <a href="http://rulebook-jfa.tumblr.com/">Rule Studies</a>
+          </h2>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
+</div>
+</div>
+
+<div id="footer">
+<div id="left-foot"><a href="mailto:fa@juuichi.com">fa@juuichi.com</a></div>
+<!--<div id="right-foot">2014</div>-->
+</div>
+
+<script>
+            var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
+            (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+            g.src='//www.google-analytics.com/ga.js';
+            s.parentNode.insertBefore(g,s)}(document,'script'));
+</script>
+
+<script>
+        $(window).load(function() {
+          $('.flexslider').flexslider({
+            animation: "slide",
+            controlNav: false,
+            animationLoop: true,
+            slideshow: true,
+          });
+        });
+</script>
+
+<script type="text/javascript">
+        $(function() {
+            $('.fixed-nav').waypoint('sticky');
+        });
+        
+        $(function(){
+           var section = $('section');
+           var menuLink = $('nav ul li a')
+           section.waypoint(function(direction) {
+              var activeSection = $(this);
+              if (direction === 'up') {
+                 activeSection = activeSection.prev();
+              }
+              var activeMenuLink = $('nav ul li a[href=#' + activeSection.attr('id') + ']');
+              menuLink.removeClass('active');
+              activeMenuLink.addClass('active');
+           },{
+              offset: '60'
+           });
+        });
+</script>
+</body>
+
+</html>
